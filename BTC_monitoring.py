@@ -13,8 +13,10 @@ load_dotenv()
 CURRENCY = "eur"
 THRESHOLD_PCT = 5.0          # % de cambio respecto a la media de ayer que dispara la alerta
 CHECK_INTERVAL_SECONDS = 60  # cada cuánto se comprueba el precio
+
 DAILY_REPORT_HOUR = 21       # hora (0-23) a la que se envía el email diario con el resumen
 DAILY_REPORT_MINUTE = 0      # minuto (0-59) a la que se envía el email diario con el resumen
+
 MAX_ALERTS_PER_DAY = 1       # nº máximo de emails de alerta por umbral que se envían al día
 
 EMAIL_USER = os.environ["EMAIL_USER"]
