@@ -11,18 +11,18 @@ load_dotenv()
 
 # ---- Config ----
 CURRENCY = "eur"
-THRESHOLD_PCT = 5.0          # % de cambio respecto a la media de ayer que dispara la alerta
+THRESHOLD_PCT = 2.0          # % de cambio respecto a la media de ayer que dispara la alerta
 CHECK_INTERVAL_SECONDS = 60  # cada cuánto se comprueba el precio
 
-DAILY_REPORT_HOUR = 21       # hora (0-23) a la que se envía el email diario con el resumen
-DAILY_REPORT_MINUTE = 0      # minuto (0-59) a la que se envía el email diario con el resumen
+DAILY_REPORT_HOUR = 7       # hora (0-23) a la que se envía el email diario con el resumen
+DAILY_REPORT_MINUTE = 00      # minuto (0-59) a la que se envía el email diario con el resumen
 
 MAX_ALERTS_PER_DAY = 1       # nº máximo de emails de alerta por umbral que se envían al día
 
 EMAIL_USER = os.environ["EMAIL_USER"]
 EMAIL_PASS = os.environ["EMAIL_PASS"]
 
-
+print(len(EMAIL_PASS), repr(EMAIL_PASS))
 # ---- Datos de precio ----
 def get_current_price():
     url = "https://api.coingecko.com/api/v3/simple/price"

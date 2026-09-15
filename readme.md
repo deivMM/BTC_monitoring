@@ -16,3 +16,17 @@ pip install matplotlib numpy pandas
 pip list
 
 deactivate
+
+###########################################################
+sudo nano /etc/systemd/system/btc-monitor.service
+###########################################################
+sudo systemctl daemon-reload
+sudo systemctl enable --now btc-monitor
+
+
+Estado del servicio ---> sudo systemctl status btc-monitor.service
+
+Detener	---> sudo systemctl stop btc-monitor.service
+Iniciar ---> manualmente	sudo systemctl start btc-monitor.service
+Desactivar del arranque ---> sudo systemctl disable btc-monitor.service
+Activar al arranque	---> sudo systemctl enable btc-monitor.service
