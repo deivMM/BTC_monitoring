@@ -9,6 +9,7 @@ email_user = os.environ["EMAIL_USER"]
 email_pass = os.environ["EMAIL_PASS"]
 
 msg = MIMEText("¡Ha habido un cambio en la página que monitorizas!")
+
 msg["Subject"] = "Alerta de monitorización"
 msg["From"] = email_user
 msg["To"] = email_user  # te lo envías a ti mismo
